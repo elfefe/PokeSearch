@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_pokemon_presentation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constrainedHeight="true"
+        app:layout_constraintHeight_percent="0.4"
+
+        app:layout_constraintVertical_bias="0"
+
+        android:background="@color/teal_200"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_presentation_name"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Pokemon"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:textStyle="bold"
+
+            app:layout_constraintVertical_bias="0.15"
+            app:layout_constraintHorizontal_bias="0.2"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_presentation_type_1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="20dp"
+
+            android:text="fire"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="normal"
+
+            android:background="@drawable/shape_pokemon_type"
+
+            app:layout_constraintVertical_bias="0."
+            app:layout_constraintHorizontal_bias="0.1"
+
+            app:layout_constraintTop_toBottomOf="@id/textview_presentation_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textview_presentation_name"
+            app:layout_constraintEnd_toEndOf="@id/textview_presentation_name"/>
+        <View
+            android:id="@+id/view_presentation_type_separator"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toEndOf="@id/textview_presentation_type_1"
+            app:layout_constraintEnd_toStartOf="@id/textview_presentation_type_2"
+            app:layout_constraintTop_toTopOf="@id/textview_presentation_type_1" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_presentation_type_2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="20dp"
+
+            android:text="poison"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="normal"
+
+            android:background="@drawable/shape_pokemon_type"
+
+            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintHorizontal_bias="0.2"
+
+            app:layout_constraintTop_toTopOf="@id/textview_presentation_type_1"
+            app:layout_constraintBottom_toBottomOf="@id/textview_presentation_type_1"
+            app:layout_constraintStart_toEndOf="@id/view_presentation_type_separator" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_pokemon_description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="@drawable/shape_pokemon_description"
+
+        app:layout_constrainedHeight="true"
+        app:layout_constraintHeight_percent="0.7"
+
+        app:layout_constraintVertical_bias="1"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_pokemon_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            app:tabTextColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pager_pokemon_description"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_pokemon_description"
+            app:layout_constraintBottom_toBottomOf="parent">
+        </androidx.viewpager2.widget.ViewPager2>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageview_pokemon_picture"
+
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+
+        app:layout_constraintVertical_bias="0.79"
+        app:layout_constraintHorizontal_bias="0.5"
+
+        android:scaleType="fitXY"
+
+        app:layout_constraintTop_toTopOf="@id/layout_pokemon_presentation"
+        app:layout_constraintBottom_toBottomOf="@id/layout_pokemon_presentation"
+        app:layout_constraintStart_toStartOf="@id/layout_pokemon_presentation"
+        app:layout_constraintEnd_toEndOf="@id/layout_pokemon_presentation" />
+</androidx.constraintlayout.widget.ConstraintLayout>

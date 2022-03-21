@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PokeSearch</string>
+    <string name="pokemon_order">#%1$s</string>
+    <string name="pokemon_tag">Pokemon</string>
+    <string name="stats_label">Stats</string>
+    <string name="properties_label">Properties</string>
+    <string name="abilities_label">Abilities</string>
+    <string name="properties_weight_value">%1$s lb</string>
+    <string name="properties_height_value">%1$s ft</string>
+</resources>

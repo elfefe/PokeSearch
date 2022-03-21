@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="128dp"
+    android:background="@drawable/shape_pokemon_background"
+    android:backgroundTint="@color/teal_200"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageview_picture"
+
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintHorizontal_bias="0.2"
+
+        android:scaleType="fitXY"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_order"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="#1"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.05"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_name"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Pokemon"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.8"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_type_first"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Fire"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="normal"
+
+        app:layout_constraintVertical_bias="0.5"
+
+        app:layout_constraintTop_toBottomOf="@id/textview_name"
+        app:layout_constraintBottom_toTopOf="@id/textview_type_second"
+        app:layout_constraintStart_toStartOf="@id/textview_name"
+        app:layout_constraintEnd_toEndOf="@id/textview_name"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_type_second"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Grass"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="normal"
+
+        app:layout_constraintVertical_bias="0.7"
+
+        app:layout_constraintTop_toBottomOf="@id/textview_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/textview_name"
+        app:layout_constraintEnd_toEndOf="@id/textview_name"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
