@@ -23,7 +23,7 @@ class PokeRepositoryInstrumentedTest {
         val scope = CoroutineScope(Dispatchers.IO)
         val repository = PokeRepository(scope)
         repository.getPokemons().onEach {
-            assert(it.isNotEmpty())d
+            assert(it.isNotEmpty())
             if (it.size == 50) assert(it.size == 50)
         }.launchIn(scope)
     }
